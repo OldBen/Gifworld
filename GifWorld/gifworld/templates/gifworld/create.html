@@ -1,0 +1,21 @@
+{% include "gifworld/nav.html" with game=game_id %}
+
+<div style="padding-top: 50px;"/>
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<h3 style="padding-left: 25px;">You're now uploading {{game_name}} GIF. Switch the game via navigation bar if you plan to upload GIF from different game.</h3>
+<div class="col-lg-1"></div>
+
+<div class="col-lg-4">
+  <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+    {% bootstrap_button "Upload" button_type="submit" button_class="btn btn-primary" %}
+    {% bootstrap_button "Cancel" button_type="reset" button_class="btn btn-reset" href="."%}
+    {% endbuttons %}
+  </form>
+</div>
+<div class="col-lg-7"></div>
+

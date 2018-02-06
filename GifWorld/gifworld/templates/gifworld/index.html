@@ -1,0 +1,15 @@
+{% include "gifworld/nav.html" with game=game %}
+<div style="padding-top: 50px;"/>
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% load static %}
+<table style="width: 850px; align: center; border: 0px">
+<tr>
+<td>
+<a href="./csgo"> <img src="{% static 'gifworld/cs-logo.png' %}" alt="Counter-Strike" height="400px" width="400px"></a>
+</td>
+<td>
+<a href="./ow"><img src="{% static 'gifworld/ow-logo.png' %}" alt="Overwatch" height="400px" width="400px"></a>
+</td>
+</tr>
+</table>

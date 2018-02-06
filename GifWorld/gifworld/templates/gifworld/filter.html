@@ -1,0 +1,15 @@
+﻿{% include "gifworld/nav.html" with game=game_id %}
+
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<div style="padding-top: 50px;"/>
+
+
+<div class="col-lg-4">
+  <form method="post" enctype="multipart/form-data" action="../{{game}}">
+      {% csrf_token %}
+    {% bootstrap_form form %}
+      <button type="submit" class="btn btn-primary" >{% bootstrap_icon "search" %} Search</button>
+  </form>
+</div>

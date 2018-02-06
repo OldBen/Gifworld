@@ -1,0 +1,28 @@
+{% include "gifworld/nav.html" with game=game %}
+<div style="padding-top: 50px;"/>
+
+<center>
+{% if gif %}
+<table width="1000px">
+<tr>
+<td colspan=6>
+<img src="{{ gif.image.url }}" alt="{{ gif.title }}" width="600px">
+</td>
+<td colspan=3>
+<h3> {{ gif.title }} </h3><br/>
+{% if game == "csgo" %}
+Used weapon: {{ gif.get_weapon_used_display }}<br/>
+{% else %}
+Hero class: {{gif.get_hero_class_display}}<br/>
+{% endif %}
+Rating: {{ gif.rating }}<br/>
+Upload date: {{ gif.upload_date }}<br/>
+</td>
+</tr>
+</table>
+</center>
+{% else %}
+Gif with that ID wasn't found
+{% endif %}
+  <p><a href="/gifworld/{{game}}">Return to list</a></p>
+<center>

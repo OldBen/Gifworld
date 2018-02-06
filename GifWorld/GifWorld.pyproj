@@ -1,0 +1,169 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>GifWorld</Name>
+    <RootNamespace>GifWorld</RootNamespace>
+    <InterpreterId>MSBuild|SZT|$(MSBuildProjectFullPath)</InterpreterId>
+    <PythonRunWebServerCommandArguments>runserver  %SERVER_PORT% $(CommandLineArguments)</PythonRunWebServerCommandArguments>
+    <PythonDebugWebServerCommandArguments>runserver --noreload %SERVER_PORT% $(CommandLineArguments)</PythonDebugWebServerCommandArguments>
+    <PythonRunWebServerCommandType />
+    <PythonDebugWebServerCommandType />
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>d96e68bb-5321-40fc-be20-40a3168eff48</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>
+    </DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost/gifworld</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="gifworld\admin.py" />
+    <Compile Include="gifworld\apps.py" />
+    <Compile Include="gifworld\forms.py" />
+    <Compile Include="gifworld\migrations\0001_initial.py" />
+    <Compile Include="gifworld\migrations\0002_auto_20180124_0157.py" />
+    <Compile Include="gifworld\migrations\0003_auto_20180124_0243.py" />
+    <Compile Include="gifworld\migrations\0004_auto_20180124_0248.py" />
+    <Compile Include="gifworld\migrations\0005_auto_20180124_0249.py" />
+    <Compile Include="gifworld\migrations\__init__.py" />
+    <Compile Include="gifworld\models.py" />
+    <Compile Include="gifworld\tests.py" />
+    <Compile Include="gifworld\urls.py" />
+    <Compile Include="gifworld\views.py" />
+    <Compile Include="gifworld\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="projekt\__init__.py" />
+    <Compile Include="projekt\settings.py" />
+    <Compile Include="projekt\urls.py" />
+    <Compile Include="projekt\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Counter-Strike_Global_Offensive_05-05-2017_1-17-16-278.gif" />
+    <Content Include="db.sqlite3" />
+    <Content Include="gifworld\cs-logo.png" />
+    <Content Include="gifworld\migrations\__pycache__\0001_initial.cpython-35.pyc" />
+    <Content Include="gifworld\migrations\__pycache__\0002_auto_20180124_0157.cpython-35.pyc" />
+    <Content Include="gifworld\migrations\__pycache__\0003_auto_20180124_0243.cpython-35.pyc" />
+    <Content Include="gifworld\migrations\__pycache__\0004_auto_20180124_0248.cpython-35.pyc" />
+    <Content Include="gifworld\migrations\__pycache__\0005_auto_20180124_0249.cpython-35.pyc" />
+    <Content Include="gifworld\migrations\__pycache__\__init__.cpython-35.pyc" />
+    <Content Include="gifworld\ow-logo.png" />
+    <Content Include="gifworld\static\gifworld\cs-logo.png" />
+    <Content Include="gifworld\static\gifworld\gifplayer.css" />
+    <Content Include="gifworld\static\gifworld\gifplayer.js" />
+    <Content Include="gifworld\static\gifworld\ow-logo.png" />
+    <Content Include="gifworld\templates\gifworld\create.html" />
+    <Content Include="gifworld\templates\gifworld\details.html" />
+    <Content Include="gifworld\templates\gifworld\filter.html" />
+    <Content Include="gifworld\templates\gifworld\index.html" />
+    <Content Include="gifworld\templates\gifworld\list.html" />
+    <Content Include="gifworld\templates\gifworld\nav.html" />
+    <Content Include="gifworld\__pycache__\admin.cpython-35.pyc" />
+    <Content Include="gifworld\__pycache__\apps.cpython-35.pyc" />
+    <Content Include="gifworld\__pycache__\forms.cpython-35.pyc" />
+    <Content Include="gifworld\__pycache__\models.cpython-35.pyc" />
+    <Content Include="gifworld\__pycache__\urls.cpython-35.pyc" />
+    <Content Include="gifworld\__pycache__\views.cpython-35.pyc" />
+    <Content Include="gifworld\__pycache__\__init__.cpython-35.pyc" />
+    <Content Include="projekt\__pycache__\settings.cpython-35.pyc" />
+    <Content Include="projekt\__pycache__\urls.cpython-35.pyc" />
+    <Content Include="projekt\__pycache__\wsgi.cpython-35.pyc" />
+    <Content Include="projekt\__pycache__\__init__.cpython-35.pyc" />
+    <Content Include="requirements.txt" />
+    <Content Include="static\gifworld\csgo\Counter-Strike_Global_Offensive_05-05-2017_1-17-16-278.gif" />
+    <Content Include="static\gifworld\csgo\Counter-Strike_Global_Offensive_05-05-2017_1-17-16-278_FttswZ0.gif" />
+    <Content Include="upload\csgo\Counter-Strike_Global_Offensive_05-05-2017_1-17-16-278.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="C:\Users\maste_000\source\repos\GifWorld\GifWorld\projekt\" />
+    <Folder Include="C:\Users\maste_000\source\repos\GifWorld\GifWorld\projekt\csgo\" />
+    <Folder Include="C:\Users\maste_000\source\repos\GifWorld\GifWorld\projekt\ow\" />
+    <Folder Include="C:\Users\maste_000\source\repos\GifWorld\GifWorld\projekt\__pycache__\" />
+    <Folder Include="gifworld\" />
+    <Folder Include="gifworld\migrations\" />
+    <Folder Include="gifworld\migrations\__pycache__\" />
+    <Folder Include="gifworld\static\" />
+    <Folder Include="gifworld\static\gifworld\" />
+    <Folder Include="gifworld\templates\" />
+    <Folder Include="gifworld\templates\gifworld\" />
+    <Folder Include="gifworld\__pycache__\" />
+    <Folder Include="projekt\" />
+    <Folder Include="projekt\csgo\" />
+    <Folder Include="projekt\ow\" />
+    <Folder Include="projekt\__pycache__\" />
+    <Folder Include="static\" />
+    <Folder Include="static\gifworld\" />
+    <Folder Include="static\gifworld\csgo\" />
+    <Folder Include="upload\" />
+    <Folder Include="upload\csgo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="SZT\">
+      <Id>SZT</Id>
+      <Version>3.6</Version>
+      <Description>SZT (Python 3.6 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

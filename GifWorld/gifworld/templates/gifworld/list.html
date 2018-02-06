@@ -1,0 +1,47 @@
+{% include "gifworld/nav.html" with game=game %}
+{% load static %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+<div style="padding-top: 50px;"></div>
+<div class="container" style="width: 90%;">
+<div class="row">
+{% bootstrap_button "Upload GIF" href="create" button_class="btn btn-primary btn-lg" %}
+</div>
+
+        {% for gif in gifs %} 
+            {% if forloop.counter0 == 0 or forloop.counter0 == 3 %}
+                <div class="row">
+            {% endif %}
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                        <a href="{{game}}/{{gif.id}}"><img class="img-fluid" src="{{gif.image.url}}" alt="{{gif.title}}" /></a>
+                        <br />
+                        <div class="caption">{{gif.title}}</div>
+                       </div>
+                   </div>
+            {% if forloop.counter0 == 2 or forloop.counter0 == 5 or forloop.last  %}
+                </div>
+            {% endif %}        
+        {% empty %}
+            <p>No gifs match given criteria.</p>
+        {% endfor %}
+    <div class="row" style="margin:auto">
+            <div class="col-md-3"></div>
+            <div class="col-md-2 center-block text-center" >
+            {% if gifs.has_previous %}                
+                <a class="btn btn-default" href="?page={{ gifs.previous_page_number }}">{% bootstrap_icon "circle-arrow-left" %} Previous page</a>
+            {% endif %}
+                </div>
+                <div class="col-md-2 center-block text-center" >
+                <a href="{{game}}/filter" class="btn btn-default">{% bootstrap_icon "search" %} Search</a>
+                </div>
+                <div class="col-md-2 center-block text-center" >
+            {% if gifs.has_next %}
+                <a class="btn btn-default" href="?page={{ gifs.next_page_number }}">Next page {% bootstrap_icon "circle-arrow-right" %}</a>
+            {% endif %}
+                </div>
+                <div class="col-md-3" ></div>                   
+        </div>
+    </div>
+
+
